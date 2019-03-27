@@ -1,0 +1,39 @@
+create table telangana(No serial,Cand_Name varchar,pNo int,Place char(50),post char(10))
+select * from telangana
+drop table telangana
+insert into telangana(Cand_Name,pNo,Place,post) values('Yadhaya',979078673,'chaveela','MLA')
+insert into telangana(Cand_Name,pNo,Place,post) values('narandhra reddy',974078673,'kodangal','MLA'),('annad',974078173,'vikarabadh','MLA'),
+('prakesh',664078673,'rajandhra nagar','MLA'),('haresh rao',974448673,'sidhipet','MLA'),('sabhitha indhra reddy',884078673,'mahasvaram','MLA')
+insert into telangana(cand_Name,pNo,Place,post) values('ktr',67674452,'sirisilla','MLA'),('davendhr',24534556,'sicendhrabad','MLA')
+create table majarity(no serial,votes int)
+insert into majarity(votes) values(45434),(67767),(6667),(24353),(66561)
+select * from majarity
+select cand_name,votes from telangana t join majarity m on t.no = m.no
+select cand_name,pno,place,post,votes from telangana t left outer join majarity m on t.no = m.no
+select cand_name,pno,place,post,votes from telangana t right outer join majarity m on t.no = m.no
+select t.cand_name,t.pno,t.place,t.post,m.votes from telangana t full join majarity m on t.no = m.no
+select t1.place,t2.post from telangana t1 join telangana t2 on t1.no = t2.no
+------------------------------------------------------------------------------------
+create table departments3(
+deptid serial,
+deptname char(30),
+deptdesignation char(30)	
+)
+drop table departments3																					
+ select *from departments3				
+insert into departments3(deptname,deptdesignation) values('ravikiran','developer'),
+('ravi','junior developer'),('ramesh','angular developer'),('srinivas','trainee developer')	
+insert into departments3(deptname,deptdesignation) values('raji',''),('raj','')
+	update departments3 set deptname='mahesh' where deptid=8																				
+create table employee3(
+empid int,
+empmanager varchar,
+empmgid int	
+)	
+insert into employee3 values(1,'waston',1001),(2,'dhoni',1002),(3,'warne',1003),
+(4,'mcgranth',1004)			
+select *from employee3
+	drop table employee3			
+select d.deptid,d.deptname,d.deptdesignation,e.empmgid from departments3 d join employee3 e on e.empid= d.deptid
+select e.empid,e.empmanager,d.deptname from employee3 e join departments3 d on d.deptid= e.empid			
+select d.deptid,d.deptdesignation,e.empmgid from departments3 d right outer join employee3 e on e.empid= d.deptid																							

@@ -1,0 +1,20 @@
+create table states1(
+stateid int,
+name varchar,
+country varchar	
+)
+insert into states1 values(1,'telegana','india'),(2,'ap','india'),(3,'tamilnadu','india'),
+(4,'sydeny','australia'),(5,'britain','england')
+
+create table city(
+cityid int,
+name varchar,
+	city varchar
+)
+insert into city values(1,'rangareddy','telegana'),(2,'shamshabad','telegana'),
+(3,'guntur','ap'),(4,'amaravathi','ap'),(5,'chennai','tamilnadu'),(6,'mysore','tamilnadu'),
+(7,'lords','england'),(8,'eidgesbton','england'),(9,'melouberno','austraila'),(10,'adeladie','australia')
+select from city 
+select *from states1
+drop table states1
+drop table ci

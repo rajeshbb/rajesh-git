@@ -1,0 +1,40 @@
+create table department1(
+deptid int constraint pk primary key,
+	deptname char(40),
+	deptdname varchar
+)
+create table employee1(
+deptid int,
+ename char(30),
+edname varchar
+	
+)
+drop table department1
+select *from department1
+insert into department1 values (1001,'raju','HR')
+insert into department1 values (1002,'ravi','sales'),(1003,'raj','HR-manager'),(1004,'ramesh','manager')
+insert into employee1 values(1001,'raji','sales'),(1002,'ravikanth','admin')
+alter table employee1 add constraint fk foreign key(deptid) references department1(deptid)( should have same name )
+drop table employee1
+select *from employee1
+----------------------------------------------------------------------------
+create table department2 (
+ deptid int constraint pkd primary key , 
+ deptname varchar(30)
+)
+
+Create table Employee2(
+	Eno int, 
+	Ename varchar(30) NOT NULL,
+	city varchar(30), 
+	DeptId	int ,
+	salary money 
+)
+select *from department2
+select *from employee2
+insert into department2 values (1007,'HR'),(1006,'admin'),(1005,'manager'),(1004,'hr manager')
+insert into employee2 values (10,'raju','hyderbad',1001,2000)
+insert into employee2 values (10,'raju','hyderbad',1003,2000),
+  (11,'ravi','hyderbad',1002,25000),(12,'ramesh','hyderbad',1004,2000)
+alter table employee2 add constraint fk foreign key(deptid) references department2(deptid)
+ select *from employee2 where salary =(select salary from employee2 where eno=11)

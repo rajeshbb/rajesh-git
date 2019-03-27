@@ -1,0 +1,66 @@
+create table products(
+ proid int,
+proname char(30),
+proprice int,
+	probrand char(40),
+	proquanity int
+
+)
+insert into products  values(10,'shoes',2000,'puma',20),(11,'bats',1000,'mrf',20),
+							(12,'shirts',3000,'peterengland',20),(13,'sports shoes',5000,'addias',20),
+							(14,'spects',2000,'reybon',30), (15,'jeans',1000,'puma',40)	
+							
+		select *from products		
+		
+update products set  proname='formalshoes' where proid=15
+insert into products  values(16,'belt')
+update products set proprice=2000, probrand='australia',proquanity=5 where proid=16
+delete from products where proprice=5000
+insert into products values(13,'sports shoes',5000,'addias',20)
+------------------------------------------------------------------------
+ALTER TABLE PRODUCTS
+ ADD COLUMN place char(40)
+ --------------------------------------------------------------
+ select *from products
+ update products set place='hyderabad'
+ update products set mobileno=456789 where probrand='hp'
+ update products set mobileno=789456 where proquanity=20
+update products set mobileno=123456 where proid=11
+update products set mobileno=89562314 where proname='phones'
+update products set mobileno=74125896 where probrand='samsung'
+update products set place='chennai'where proid=15
+update products set proquanity=30 where place='chennai'
+select *from products where proname=(select proname from products where probrand='mrf')
+select *from products where proname=(select proname from products where probrand='samsung')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

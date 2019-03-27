@@ -1,0 +1,37 @@
+create table student2(
+id int,
+name char(30),
+
+	fee int
+)
+drop table student2
+insert into student2 values(1001,'raju',5000),(1002,'ravi','6000'),
+(1003,'ravikiran','7500'),(1004,'kiran','8000')													   
+
+create table course(
+id int,
+course char(30),
+fee int
+)
+drop table course
+insert into course values(1001,'mpc','1500'),(1002,'bipc','1600'),(1003,'cec','1400'),(1004,'mec','1500')
+select *from student2
+select *from course
+select s.name,c.course, c.fee+s.fee from student2 s cross join course c
+delete from course where id=1004
+-----------------------
+create table processor(
+pno int,
+pname char(30),
+price int	
+)
+create table harddisk(
+hdno int,
+capicty varchar,
+price int	
+)
+insert into processor values(1,'i4',2000),(2,'i5',3000),(3,'i5',4000),(4,'i6',45000)
+insert into harddisk values(1,'250gb',1500),(2,'500gb',2000),(3,'1tb',2500)
+select *from processor
+select *from harddisk
+select p.pname,h.capicty, p.price+h.price from processor p cross join harddisk h

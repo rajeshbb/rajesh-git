@@ -1,0 +1,51 @@
+create table players(
+id int,
+ name varchar,
+	state varchar
+)
+insert into players values(1,'sachin','mumbai'),(2,'kohil','delhi'),(3,'dhoni','jarakand'),
+(4,'sehwag','delhi'),(5,'rohit','mumbai')
+select * from players
+create table psalary(
+id int,
+mobileno int,
+salary	money
+)
+insert into psalary values(1,789456,25000),(2,45678912,5000),(3,785203,8000),
+(4,4560200,7500)
+select *from psalary
+select *from players
+select p.name,ps.mobileno,ps.salary from players p join psalary ps on p.id=ps.id
+select p.id,p.name,ps.mobileno,ps.salary from players p left outer join psalary ps on p.id=ps.id
+select p.id,p.name,ps.mobileno,ps.salary from players p right outer join psalary ps on p.id=ps.id
+select p.id,p.name,ps.mobileno,ps.salary from players p full join psalary ps on p.id=ps.id
+---------------------------------------------------------------------------------------------------
+
+create table pemail(
+id int,	
+emailid varchar,
+mobileno varchar	
+	
+)
+insert into pemail values(1,'r@gmail.com','1234567890')
+insert into pemail values(2,'b@gmail.com','7412583690'),(3,'a@gmail.com','0123456789'),
+(4,'j@gmail.com','4567891230')
+select *from pemail
+select p.id,p.name,ps.mobileno,ps.salary,pe.emailid from players p join psalary ps on p.id=ps.id join pemail pe
+on ps.id= pe.id (three tables)
+-----------------------------------------------------------------------------------------------
+create table pbank(
+ id int,
+ bankname varchar,
+ accountno varchar	
+)
+insert into pbank values(1,'andhra','sb104007056980')
+insert into pbank values(2,'Sbi','ag104007056980'),(3,'icici','ac2345678942'),(4,'kotak','00014567893'),
+(5,'canara','c245678942000')
+select *from pbank
+select p.id,p.name,ps.mobileno,ps.salary,pe.emailid ,pb.bankname,pb.accountno 
+from players p join psalary ps on p.id=ps.id join pemail pe
+on ps.id= pe.id join pbank pb on pe.id=pb.id
+----------------------------------------------------------------------------
+
+

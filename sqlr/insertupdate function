@@ -1,0 +1,178 @@
+create table employe(
+empid integer, 
+empname char(40), 
+deptid integer, 
+	mngrid integer, 
+	salary integer, 
+	city varchar(30)
+)
+
+
+
+insert into employe values(10,'Siva',10,1001,2000,'Hyderabad')
+
+
+insert into employe values
+(20,'Rajesh',10,1001,1000,'Hyderabad'),
+(30,'Riyaz',10,1001,1000,'Chennai'),
+(40,'Raghava',10,1001,1000,'Hyderabad'),
+(50,'Ramana',10,1001,1000,'Banglore')
+select *from employe
+create table DeptSal(
+deptID integer, 
+minSal integer, 
+maxSal integer
+)
+
+
+insert into  deptsal values
+(10,500,50000),
+(20,1200,45000),
+(30,1500,50000),
+(40,1000,30000)
+ create table department3(
+ deptid integer,
+	 deptname char(40),
+	 deptlocation varchar
+ )
+ insert into department3 values 
+(10,'HR','Hyderabad'),(20,'admin','mumbai'),
+(30,'SALES','Hyderabas'),(40,'IT','Banglore'),
+(50,'TEST','Chennai'),(60,'DGM','Chennai')
+select  *from department3 select *from employe select *from deptsal
+drop table employe 
+------------------------------------------------------------
+select *from employee
+////insert///
+create or replace function fn_addemp(para_name char(30),para_sal integer,
+para_deptid integer)
+returns int as
+$$
+ declare n int;
+ begin 
+ insert into employe (empname,salary,deptid) values(para_name,para_sal,para_deptid) 
+ returning deptid into n;
+ return n;
+ end
+ $$ language plpgsql
+ select  fn_addemp('kumar',10000,5)
+ select *from employe
+ select  from fn_addemp('kumar',10000,5)
+----------------------------------------------------------------------------------		
+		
+create or replace function fn_employee(id integer) 
+returns integer
+as $$
+ declare empcount integer;
+begin
+select count(empid) into empcount from employee where deptid=id;
+return empcount;
+end
+$$ language plpgsql
+select fn_employee('5')
+-------------------------------------------------------------------------------------
+create or replace function fn_sum1( id integer)
+returns integer
+as
+$$
+declare totsal integer;
+begin
+select sum(salary) into totsal from employee where deptid=id;
+return totsal;
+end
+$$ language plpgsql
+select fn_sum1('1')
+---------------------------------------------------------------------------------------------
+//update///
+
+create or replace function fn_update()
+returns int as
+$$
+ declare v int;
+ begin 
+ update employe set empid='60'  where empname='kumar' returning deptid into v;
+ return v;
+ end
+ $$ language plpgsql
+ select *from employe
+ select fn_update()
+ select *from fn_update()
+ select *from employe
+ -----------------------------------------------------------------------------------
+ ///update by using ename///
+ create or replace function fn_updatename()
+returns int as
+$$
+ declare v int;
+ begin 
+ update employee set empid='6'  where ename='kiran' returning deptid into v;
+ return v;
+ end
+ $$ language plpgsql
+ select fn_updatename()
+ select *from employee
+ -----------------------------------------------------------------------------------
+ /// update empid by using salary///
+ create or replace function fn_update1()
+returns int as
+$$
+ declare v int;
+ begin 
+ update employee set empid='12'  where salary=2800 returning salary into v;
+ return v;
+ end
+ $$ language plpgsql
+  select fn_update1()
+  select *from employe
+  ------------------------------------------------------------------
+  insert///
+  create or replace function fnupdate2()
+returns int as
+$$
+ declare v int;
+ begin 
+ update employe set city='bangalore'  where salary=10000 returning salary into v;
+ return v;
+ end
+ $$ language plpgsql
+  select *from employe
+  select from fnupdate2()
+  ----------------------------------------------------
+  select *from employee
+  create or replace function fninsert(emp integer,en char(30),ci char(30))
+  returns int as
+$$
+declare z int;
+begin
+insert into employe (empid,empname,city) values(emp,en,ci) 
+returning deptid into z;
+return z;
+end
+$$ language plpgsql
+select *from employe
+  select fninsert (2,'rajesh','chennai')
+---------------------------------------------------------
+create or replace function fnup()
+returns int as
+$$
+declare m int;
+begin
+update employe set deptid=11 where empname='rajesh' returning empid into m;
+return m;
+end
+$$ language plpgsql
+	select fnup()
+select *from employe
+-----------------------------------------------------------------------
+create or replace function fnudate()
+returns int as
+$$
+declare a int;
+begin
+update employe set empid=70 where deptid=1002 returning deptid into a;
+update employe set	salary=5000 where city='chennai' returning empid into a;																  
+return a;
+end
+$$ language plpgsql
+select 	fnudate()
+select *from employe																	  

@@ -1,0 +1,13 @@
+create table movieinfoo(
+movieid serial,
+	moviename  varchar,
+	heroname varchar,
+	poster varchar,
+	trailer varchar,
+	gener varchar
+)
+insert into movieinfoo(moviename,heroname,poster,trailer,gener)
+values('f2','venkatesh','f2_poster.jpg','f2_trailer.mp4','comedy'),
+('tholiprema','varun','tholiprema_poster.jpg','tholiprema_trailer.mp4','love')
+drop table movieinfoo
+select *from movieinfoo

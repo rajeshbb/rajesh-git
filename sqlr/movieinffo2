@@ -1,0 +1,9 @@
+create table userinfo(
+sno serial,
+	fname varchar,
+	lname varchar,
+	userid varchar,
+	password varchar
+)
+select *from userinfo
+insert into userinfo(fname,lname,userid,password) values('raj','redddy','act','act2')

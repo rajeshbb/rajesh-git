@@ -1,0 +1,44 @@
+select *from employee
+create table task1(
+   Empid integer,
+	Ename char (30),
+	 city varchar (30), 
+	mangerid varchar,
+	 deptname varchar,
+	 deptid int,
+	salary int
+ )
+ insert into task1 values(7,'rajukiran','hyderabad',101,'it',7,4000),
+ (2,'raj','chennai',101,'HR',2,2500),
+   (3,'rajkiran','chennai',102,'ADMIN',3,25000),(4,'raji','bangalore',102,'admin',4,250),
+   (5,'ravi','bangalore',103,'it',1,2000),(6,'kiran','hyderabad',103,'it',5,2800)
+   select *from task1 where deptid=7
+   select ename,deptid,salary from task1 where salary= (select min(salary) from task1)
+   select *from employee where salary = (select sum(salary) from employee)
+   ------------------------------------------------------------------------------------
+   select *from employee
+   update employee set deptid=2 where city='bangalore'
+   create or replace function fn_employee(id integer) 
+returns integer
+as $$
+ declare empcount integer;
+begin
+select count(empid) into empcount from employee where deptid=id;
+return empcount;
+end
+$$ language plpgsql
+select fn_employee('2')
+-------------------------------------------------------------------------------------
+create or replace function fn_sum2()
+returns integer
+as
+$$
+declare totsal integer;
+begin
+select sum(salary) into totsal from employee;
+return totsal;
+end
+$$ language plpgsql
+select fn_sum2()
+select *from fn_sum2('2')
+select *from employee

@@ -1,0 +1,83 @@
+select *from employee
+ create or replace function fntg_update()
+ returns trigger as $$
+ begin 
+ update employee set salary=1400 where empid=1;
+ return new;
+ end
+ $$ language plpgsql
+create trigger fn_tg_update after update on emp
+for each row execute procedure public.fntg_update()
+select *from emp
+update employee set salary=1400 where empid=1
+-------------------------------------------------------------------------------
+ create table emp(
+ empid int,
+empname char(30),
+	 salary int
+ )
+insert into emp values(1,'raju',2500),(2,'ravi',2000),(3,'ravikiran',5000),
+(4,'kiran',5000),(5,'raju',6000)
+create table depa(
+empid int,
+empname varchar,
+salary int	
+)
+insert into depa values(1,'hr',2500),(2,'it',2000),(3,'dgm',5000),
+(4,'rpa',5000),(5,'admin',6000)
+----------------------------------------------
+
+create or replace function fntg_reinsert()
+returns trigger as $$
+begin
+insert into depa(empid,empname,salary) values(new.empid,new.empname,new.salary);
+return new;
+end
+$$ language plpgsql
+create trigger tg_delete after insert on emp
+for each row execute procedure fntg_reinsert()
+insert into emp values(1,'ravi',6000)
+select *from emp
+drop table depa
+select *from depa
+---------------------------------------
+create or replace function fntg_reinsert1()
+returns trigger as $$
+begin
+
+return new;
+end
+$$ language plpgsql
+create trigger tg_insert1 after insert on emp for each row execute procedure 
+fntg_reinsert1()
+select *from emp
+insert into emp values(5,'raju',6000)
+----------------------------------------------------------------------------------------
+create or replace function fntg_delete()
+returns trigger as $$
+begin
+  insert into emp values(1,'raju',6000)    ;
+return new;
+end
+$$ language plpgsql
+create trigger fn_delete before delete on employee
+for each row execute procedure fntg_delete()
+delete from emp where empname='raju'
+select *from emp
+------------------------------------------------------------------
+select *from department
+select *from employee
+create or replace function fntg_delete1()
+returns trigger as $$
+begin
+insert into department values(2,'raj','chennai',101,'hr',2,2500);
+return new;
+end
+$$ language plpgsql
+create trigger fn_tgdelete after delete on employee
+for each row execute procedure fntg_delete()
+
+delete from employee where ename='rajkiran'
+select *from employee select *from department
+---------------------------------------------------------------------
+create or replace function 

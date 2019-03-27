@@ -1,0 +1,23 @@
+ create table task(
+   Empid integer,
+	Ename char (30),
+	 city varchar (30), 
+	mangerid varchar,
+	 deptname varchar,
+	 deptid int,
+	salary int
+ )
+ insert into task values(7,'rajukiran','hyderabad',101,'it',7,4000),
+ (2,'raj','chennai',101,'HR',2,2500),
+   (3,'rajkiran','chennai',102,'ADMIN',3,25000),(4,'raji','bangalore',102,'admin',4,250),
+   (5,'ravi','bangalore',103,'it',1,2000),(6,'kiran','hyderabad',103,'it',5,2800)
+   select *from task where deptid=7
+   select ename,deptid,salary from task where salary= (select min(salary) from task)
+
+   select * from employee
+   select deptname, deptid,min(salary) from employee group by deptname having min(salary)<2000
+   select deptid,min(salary),deptname from employee group by deptid having min(salary)<5000
+   select empid, max(salary) from employee group by empid having max(salary)>250
+    select empid, avg(salary) from employee group by empid having avg(salary)>2000
+	-----------------------
+	select * from employee where mangerid=(select mangerid from employee where empid='5')

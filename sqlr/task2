@@ -1,0 +1,37 @@
+create table employeee(
+empid  int unique,
+ename varchar  primary key,
+gmail varchar not null	
+)
+insert into employeee values(2,'ravi','g@gmail.com'),(3,'ravikiran','w@gmail'),
+(4,'kiran','s@gmail.com'),(5,'sri','g@gmail.com')
+select *from employeee
+
+create table departmentt(
+deptid  int unique,
+deptname varchar  primary key,
+salary varchar not null
+)
+insert into departmentt values(1,'HR',2500),(2,'ADMIN',800),(3,'IT',6000),
+(4,'DGM',5000),(5,'RPA',6500)
+select *from employeee select *from departmentt
+select e.empid,e.ename,d.deptname,d.salary,e.gmail from employeee e join departmentt d
+on e.empid=d.deptid
+----------------------------------------------------------------------------------------------
+create table studentt(
+stid int unique,
+stname varchar primary key,
+stmarks int not null
+)
+insert into studentt values(101,'raju',600),(2,'ravi',300),(3,'rajukiran',350),
+(4,'kiran',400),(5,'kiranraj',450),(6,'rajkiran',400),(7,'ravikiran',500),(8,'sri',550),
+ insert into studentt values (9,'srikiran',200),(10,'kiransai',250)
+select *from studentt
+update studentt set stid=1  where stname='raju'
+select *from studentt order by stmarks desc
+select *from studentt order by stmarks,stid, stsub1 asc
+-----------------------------------------------------------------
+alter table studentt drop column stsub5;
+alter table studentt add column stsub5 varchar;
+update studentt set stsub5=10 where stid=10
+select stname,max(stmarks) from studentt group by stname having max(stmarks) >250 

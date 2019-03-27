@@ -1,0 +1,24 @@
+create table movieinfoo(
+movieid serial,
+	moviename varchar,
+	heroname varchar,
+	poster varchar,
+	trailer varchar,
+	gener varchar
+)
+insert into movieinfoo(moviename,heroname,poster,trailer,gener)
+values('f2','venkatesh','f2_poster.jpg','f2_trailer.mp4','comedy'),
+('tholiprema','varun','tholiprema_poster.jpg','tholiprema_trailer.mp4','love')
+select *from movieinfoo
+select *from userinfo
+create table userinfo(
+sno serial,
+	fname varchar,
+	lname varchar,
+	userid varchar,
+	password varchar
+)
+select *from userinfo
+insert into userinfo(fname,lname,userid,password) values('raj','redddy','rama','ram1234')
+
+insert into userinfo values('raj','redddy','ramu','ram123')

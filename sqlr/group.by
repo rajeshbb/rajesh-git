@@ -1,0 +1,12 @@
+select *from employee
+select ename,count(mangerid) from employee group by ename
+select ename,deptid,max(salary) from employee group by ename
+ select  ename,deptname,deptid, city,max(salary) from employee where deptid='2' group by 
+ ename,deptname,deptid,city order by  max(salary) desc
+  
+ select *from employee where salary=(select salary from employee where ename='raj')
+ select *from employee where deptname=(select deptname from employee where ename='ravi')
+ select *from employee where deptname=(select deptname from employee where ename='raj')
+ select *from employee where city=(select city from employee where ename='raju')
+ select *from employee where mangerid=(select mangerid from employee where deptid='7')
+ select *from employee where mangerid=(select mangerid from employee where deptname='hr')

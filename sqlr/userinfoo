@@ -1,0 +1,9 @@
+create table userinfoo(
+	sno serial,
+	username varchar,
+	userid varchar,
+	password varchar,
+wheretoseen varchar
+)
+select *from userinfoo
+select *from productdetails

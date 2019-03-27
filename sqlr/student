@@ -1,0 +1,15 @@
+create table student1(
+ stid int,
+	stname char(40),
+	stmarks int,
+	stmob int,
+	stcity char(30)
+
+)
+insert into student1(stid,stname,stmarks,stmob,stcity) values(101,'ravi',360,78945612,'hyderbad')
+insert into student1 values(102,'raju',370,789456259,'chennai'),(103,'srinivas',345,123456678,'bangalore'),
+(104,'sri',390,123456456,'africa'),(105,'srivas',390,1234456,'australia'),
+(106,'naresh',400,45628736,'newzland')
+select *from student1
+select *from student1 where stid=105
+select *from student1 where stname =(select stname from student1 where stid=106)

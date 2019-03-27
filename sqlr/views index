@@ -1,0 +1,8 @@
+select *from employee
+create view vw_empid as select empid,ename,city,mangerid from employee
+select *from vw_empid
+drop view vw_empid
+create index ind_employee on employee(ename)
+select *from ind_employee
+select *from employee where empid=2
+select *from department

@@ -1,0 +1,57 @@
+
+create or replace function fn_empcount()
+returns  varchar
+as
+$$
+declare totcity varchar;
+ begin
+select count(city) into totcity from employee;
+return totcity;
+end
+$$ language plpgsql
+select *from fn_empcount()
+--------------------------------------------------------------------										
+create or replace function fn_sum()
+returns integer
+as
+$$
+declare totsalary integer;
+begin
+select sum(salary) into totsalary from employee;
+return totsalary;
+end
+$$ language plpgsql
+select fn_sum()
+----------------------------------------------------
+	create or replace function fn_City(ct char(30))
+returns table (name char(30),dname varchar, mang char(30),ssalary integer)
+	as 
+$$
+begin
+  return query select ename,deptname,salary from employee where City =ct;
+end
+$$ language plpgsql
+select *from fn_getCity('hyderabad')
+------------------------------------------------------------------------												  
+create or replace function fn_getCity(ct char(30))
+returns table (name char(30),dname varchar, ssalary integer)
+	as
+$$
+begin
+  return query select ename,deptname,salary from employee where City =ct;
+end
+$$ language plpgsql											  
+select *from fn_getcity('chennai')
+-----------------------------------------------------------------------											  
+create or replace function fn_sum2()
+returns integer
+as
+$$
+declare totsalary integer;
+begin
+select sum(salary+salary) into totsalary from employee;
+return totsalary;
+end
+$$ language plpgsql
+select fn_sum2()	
+select *from fn_sum2()

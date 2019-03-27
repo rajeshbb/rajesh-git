@@ -1,0 +1,18 @@
+create table student3(
+idno int,
+name varchar,
+course varchar	
+)
+insert into student3 values(1,'raju','mpc'),(2,'ravi','cec'),(3,'kiran','mec'),(4,'ravikiran','bipc'),
+ insert into student3 values(5,'naresh','bipc')
+
+create table dep(
+id int,
+	emailid varchar,
+	mobileno varchar
+)
+drop table dep
+insert into dep values(1,'r@gmail.com','7894561203'),(2,'b@gmail.com','1203645789'),
+(3,'c@gmail.com','10258741369'),(4,'d@gmail.com','0231457896')
+select *from student3 union
+select *from dep
