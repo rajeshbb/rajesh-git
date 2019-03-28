@@ -1,0 +1,326 @@
+body{
+     
+ }
+
+   .background1{
+     background-image: url(banner.png);
+     width: 1437px;
+     height: 750px;
+
+   }
+
+
+
+     .button8 {
+	border: 3px solid white;
+    border-radius: 15px;
+    width: 115px;
+    float: left;
+    font-size: 21px;
+    text-align: center;
+    margin-top: -30px;
+    color:white; 
+   }
+   
+
+   #job2{
+   	float: left;
+    color: wheat;
+    margin-top: 223px;
+    margin-left: 240px;
+    font-size: 45px;
+   }
+
+   #color2{
+   float: left;
+    margin-left: -284px;
+    margin-top: 273px;
+    color: white;
+    font-size: 20px;
+   }
+
+
+  .button1{
+  border: 3px solid blue;
+    width: 300px;
+    height: 62px;
+    background-color: blue;
+    border-radius: 30px;
+    color: white;
+    font-size: 35px;
+
+  }
+
+.color3{
+	 border: 1px solid lavender;
+    margin-top: -1px;
+    background-color: gainsboro;
+    font-size: 28px;
+    width: 1440px;
+  }
+
+.color4{
+	text-align: center;
+    color: blue;
+    font-size: 25px;
+}
+
+ .color5{
+ 	border: 2px solid aliceblue;
+    width: 206px;
+    font-size: 18px;
+    padding-left: 18px;
+    float: right;
+    margin-right: 80px;
+        height: 260px;
+ }
+
+     .button2{
+      border: 3px solid blue;
+    width: 130px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+   }
+
+
+   .color6{
+ 	border: 2px solid aliceblue;
+    width: 206px;
+    font-size: 18px;
+    padding-left: 18px;
+    float: right;
+    margin-right:80px;
+        height: 260px;
+   }
+
+
+     .button3{
+      border: 3px solid blue;
+    width: 130px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    }
+
+
+    .color7{
+ 	border: 2px solid aliceblue;
+    width: 206px;
+    font-size: 18px;
+    padding-left: 18px;
+    float: right;
+    margin-right: 80px;
+        height: 260px;
+   }
+
+
+     .button4{
+      border: 3px solid blue;
+    width: 130px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    }
+
+
+    .color8{
+ 	border: 2px solid aliceblue;
+    width: 206px;
+    font-size: 18px;
+    padding-left: 18px;
+    float: right;
+    margin-right:80px;
+        height: 260px;
+       box-shadow: 5px 5px 5px 5px antiquewhite;
+   }
+
+
+     .button5{
+      border: 3px solid blue;
+    width: 130px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    }
+
+    .color9 {
+    margin-top: 453px;
+    text-align: center;
+    background-color: aliceblue;
+    color: blue;
+    font-size: 23px;
+    height: 620px;
+    }
+    .color10{
+         width: 478px;
+    border: 1px solid aliceblue;
+    float: right;
+    color: black;
+    font-size: 17px;
+    margin-right: 110px;
+    }
+
+    .color11{
+    	width: 478px;
+    border: 1px solid aliceblue;
+    float: right;
+    color: black;
+    font-size: 17px;
+    margin-right: 110px;
+
+    }
+    .button6{
+    border: 3px solid blue;
+    width: 130px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    margin-left: -300px;
+  }
+
+  .button7{
+  	 border: 3px solid blue;
+    width: 130px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    margin-left: -300px;
+  }
+  .color12{
+  	color: blue;
+    text-align: center;
+    font-size: 25px;
+   width: 1440px;
+   height: 500px;
+  }
+  .color13 {
+  width: 1440px;
+  height: 571px;
+  background-color: #f6f5fa;
+}
+
+ .color14{
+ 
+  width: 301px;
+  height: 82px;
+  font-family: AvenirNext;
+  font-size: 30px;
+  color: blue;
+ float: right;
+    margin-right: 575px;
+
+ }
+ .color15{
+ 	margin-top: -445px;
+    float: right;
+    padding-right: 130px;
+    font-size:26px;
+ }
+ .div1 div input{
+ 	border: none;
+ }
+ .div2{
+ 	margin-top: -425px;
+    padding-left: 80px;
+    font-size: 20px;
+ }
+ .div3{
+ 	margin-top: -215px;
+    margin-left: 160px;
+ }
+ .div4{
+ 	float: right;
+ 	margin-top: 47px;
+    padding-right: 50px;
+    font-size: 18px;
+ }
+  .div5{
+  	float: right;
+ 	margin-top: 47px;
+    padding-right: 50px;
+    font-size: 18px;
+  }
+  .div6{
+  	float: right;
+ 	margin-top: 47px;
+    padding-right: 50px;
+    font-size: 18px;
+  }
+  .div8{
+  	margin-top: 170px;
+    padding-left: 81px;
+  }
+  .button9{
+  	float: right;
+    margin-right: 104px;
+    border: 1px solid blue;
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: blue;
+    font-size: 20px;
+    color: white;
+  }
+
+  .section1{
+  	  border: 1px solid aliceblue;
+    width: 628px;
+    margin: auto;
+  }
+   #r2{
+   	text-align: center;
+    color: cadetblue;
+   }
+   .section2{
+   	border: 3px solid aliceblue;
+    width: 500px;
+    border-radius: 15px;
+    margin: auto;
+   }
+   .button10{
+   	
+    border: 3px solid blue;
+    width: 230px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 18px;
+    color: white;
+    font-size: 25px;
+ }
+  .div12{
+  	margin-left: 70px;
+    margin-top: 80px;
+  }
+
+ .div12 div input{
+ 	    border: none;
+    border-bottom:3px solid aliceblue;
+    width: 360px;
+    outline: none;
+    margin-top: 19px;
+    margin-bottom: 20px;
+ }
+
+ .button12{
+ 	border: 3px solid blue;
+    width: 380px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 18px;
+    color: white;
+    font-size: 25px;
+ }
+  

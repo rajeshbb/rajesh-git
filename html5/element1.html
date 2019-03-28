@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<img  id="rose"src="download.jpg" alt="the rose" width="220" height="277">
+<canvas id="mycanvas" width="250" height="300" style="border:1px solid red;">
+</canvas>
+<p><button onclick="mycanvas()">canavas</button></p>
+
+<script>
+	function mycanvas(argument) {
+		var c =document.getElementById("mycanvas");
+	var ctx = c.getContext("2d");
+	var img=document.getElementById("rose");
+	ctx.drawImage(img,10,10);
+	}
+	/*var c =document.getElementById("mycanvas");
+	var ctx = c.getContext("2d");*/
+	/*ctx.font="30px Arial";
+	ctx.fillText("helloworld",10,50);*/
+
+/*ctx.moveTo(0,0);
+ctx.lineTo(200,100);
+ctx.fillstyle=red;
+ctx.stroke()*/
+
+//create gradient
+/*var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+ grd.addColorStop(0,"red");
+grd.addColorStop(1,"yellow");*/
+// Fill with gradient
+/*ctx.fillStyle = grd;
+ctx.fillRect(10,10,150,80);*/
+
+</script>	
+
+</body>
+</html>

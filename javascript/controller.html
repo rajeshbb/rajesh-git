@@ -1,0 +1,18 @@
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body>
+        <div ng-app="myapp"  ng-controller="shift">
+            firstname: <input type="text" ng-model="firstname"><br>
+            lastname: <input type="text" ng-model="lastname"><br>
+          <br>
+          Fullname: {{firstname + "  "+ lastname}}<br>
+        </div>
+        <script>
+            var app= angular.module('myapp , []');
+            app.controller('shift', function($scope) {
+            $scope.firstname="raju";
+            $scope.lastname="rajesh";
+            });
+            </script>
+</body>
+</html>

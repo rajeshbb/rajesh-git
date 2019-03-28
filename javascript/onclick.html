@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<!-- <h1>hello world</h1>
+	<button onclick="myfunction()">CLICK ME</button>
+<script>
+	function myfunction(){
+		console.log(document.getElementById('demo').innerHTML="HELLO WORLD");///by using button//
+	}
+</script>	
+<p id="demo"></p> -->
+
+
+
+
+///by using text click//
+
+<p id="demo">click me</p>
+<script type="text/javascript">
+	document.getElementById("demo").onmouseover=function(){myfunction()};
+	function myfunction() {
+		console.log(document.getElementById('demo').innerHTML="youclicked me");
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>call function</title>
+</head>
+<body>
+<p id="demo"></p>
+<script type="text/javascript">
+	function myfunction() {
+		/*return 5*5;*/
+	
+	  document.getElementById("demo").innerHTML= "helloworld";
+	}
+	myfunction();
+</script>
+
+
+
+<p id="demo"></p>
+<script type="text/javascript">
+	function myfunction(name) {
+		return "Hello"+ name;
+	}
+	document.getElementById("demo").innerHTML=myfunction("john");// call function by using name//
+</script>
+</body>
+</html>

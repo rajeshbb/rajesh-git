@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p id="demo"></p>
+<!-- <button onclick="myfunction()">click it</button> -->
+<script type="text/javascript">
+	var fruits=["mango","grapes","banana"];
+	document.getElementById("demo").innerHTML=fruits;
+	
+	function myfunction() {
+		fruits.push("kiwi");
+
+		document.getElementById("demo").innerHTML=fruits;//it adds elements//
+	}
+	myfunction();
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body  align="center">
+	<h2>
+  <form name="login" onsubmit="return validation()">
+   username:<input type="text" name="unname" value=""> <br/><br/>
+   password: <input type="password" name="pwd" value=""><br/><br/>
+   <input type="submit" name="btn" value="submit">
+</form>
+   </h2>
+<p>1.Both the should not be blank<br/>
+ 2.password must be 6 to 12 characters<br/>
+  3.username should not be start with -,@ and numbers</p>
+
+<script type="text/javascript">
+	function validation() {
+		var unname = document.login.unname.value;
+         var pwd  = document.login.pwd.value;
+         if (unname=="" || pwd== "") {
+           alert("both the fields should not be blank");
+            return;
+        
+        }
+        if (pwd.length<6 || pwd.length>12) {
+        	alert("password must be 6 to 12 characters");
+        	return;
+        }
+
+
+       var str=unname.slice(0,1);
+       if (unname.slice(0,1)=="_" || unname.slice(0,1)=="@" || str.match (/[0-9]/g)!=null) {
+       	alert("username should not start with _, @ and numbers");
+       	return;
+       }
+	 }
+
+</script>
+
+</body>
+</html>
+
+<!-- <html>
+    <body>
+
+         <form name="regForm" onsubmit="return validate()" action="nextpage.html">
+                 UserName:<input type="text" name="username"><br>
+                 Password:<input type="password" name="password"><br>
+                 <input type="submit" value="submit">
+         </form>
+         <script>
+             var usernames=["ram123456","rai123456","rakesh12345"];
+             function validate(){
+                var username=document.forms["regForm"]["username"].value;
+                var password=document.forms["regForm"]["password"].value;
+                console.log("password:",password);
+                var regEx=/^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/;
+                console.log("testing pwd",regEx.test(password));
+
+               if(username == "")
+               {
+                     alert("Username should not be empty");
+                     return false;
+               }
+               if(username.length<8){
+                alert("Username must be atleast 8 characters");
+                     return false;
+               }
+               if(usernames.includes(username))
+               {
+                    alert("username already exists");
+                    return false;
+               }
+               if(!regEx.test(password)){
+                   alert("Password does not meet the criteria");
+                   return false;
+               }
+               return true;
+             }
+         </script>
+
+    </body>
+</html>
+ -->

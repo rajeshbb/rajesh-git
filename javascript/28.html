@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+
+        /*var comments=[];
+        function comment(){
+            var comment=document.getElementById("comment").value;
+             comments.push(comment);
+             displayComments(comments);
+        }*/
+        
+       /* function displayComments(comments){
+            console.log("hey"+comments[0]);
+        document.getElementById("showComments").innerHTML=comments[0];
+        }*/
+        var numberOfLikes=0;
+       function like(){
+
+           numberOfLikes++;
+           likesCount();
+       }
+       function dislike(){
+           if(numberOfLikes>0)
+           {
+            numberOfLikes--;
+            likesCount();
+           }
+           else
+           {
+               likesCount();
+           }
+            
+       }
+       function showComments(){
+            
+       }
+       function likesCount(){
+       document.getElementById("likesCount").innerHTML="<h3>No of likes as of now: "+numberOfLikes + "</h3>";
+       }
+	</script>
+</head>
+<body>
+     <img src="download.jpg">
+     <button onclick="like()" style="border: 1px;
+    height: 33px;
+    background-color: blue;
+    width: 86px;
+    font-size: 20px;">Like</button>
+     <button onclick="dislike()" style="border: 1px; border: 1px;
+    height: 33px;
+    background-color: blue;
+    width: 86px;
+    font-size: 20px;">Dislike</button>
+     <p id="likesCount"></p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form calcuate</title>
+
+</head>
+<body>
+     <form name="formcalc">
+     	Number1:<input type="text" name="txtnum1">
+     	<br>
+     	 Number2:<input type="text" name="txtnum2">
+     	 <br>
+     	 result: <input type="text" name="txtres"><br>
+
+     	 <input type="button" value="click" onClick="sumvalues()">
+
+     </form>
+     <script type="text/javascript">
+     	function sumvalues() {
+            
+            var num1,num2, res;
+            num1=Number(document.formcalc.txtnum1. value);
+            num2=Number (document.formcalc.txtnum2. value);
+            res=num1+num2;
+            document.formcalc.txtres.value=res;
+     		
+     	}
+     </script>
+</body>
+</html> 

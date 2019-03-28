@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button onclick="myfunction()">onclick</button>
+<script type="text/javascript">
+	 /*function myfunction(){
+		var str="1000,100 or 100000";
+		var patt1 =  /\d{5}/g;
+		var result=str.match(patt1);
+		console.log(result);
+	}*/
+
+	function myfunction() {
+		/*var str ="hello";
+		var patt2 = /[h]/g;
+		var result = str. match(patt2);
+		console.log(result);*/
+
+		var str = "red, green, red, orange, yellow, orange, blue, yellow,black";
+		var patt3 = /(red| green)/g;
+		var result = str.match(patt3);
+		console.log(result);
+	}
+
+</script>
+</body>
+</html>

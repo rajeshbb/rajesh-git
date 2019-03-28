@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button id="button"> click me</button>
+ <script type="text/javascript">
+ 	/*button.onclick=function() {
+ 		alert("add eventlister1")
+ 	 }
+ 	 button.onclick=function () {
+ 	 	alert("add eventlister2")
+ 	 }*/
+ 	  
+      var eventlistener1=function () {
+ 	  	alert("eventlistener1")
+ 	  }
+ 	  var eventlistener2=function () {
+ 	  	alert("eventlistener2")
+ 	  }
+ 	  var eventlistener3=function () {
+ 	  	alert("eventlistener3")
+ 	  }
+ 	  var isDone=false;
+     button.addEventListener("click",eventlistener1);
+     if(isDone){
+     button.addEventListener("click",eventlistener2);
+      }
+     button.addEventListener("click",eventlistener3);
+
+   
+ </script>
+</body>
+</html>
