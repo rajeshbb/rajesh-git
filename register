@@ -1,0 +1,89 @@
+create table register(
+	id serial,
+	fname varchar,
+	lname varchar,
+	username varchar,
+	password varchar,
+	email varchar,
+	phone varchar,
+	gender varchar	
+)
+select *from register
+--------------------------------------------------------------------------------------------------
+//get//
+create or replace function fn_post(f varchar,l varchar,u varchar,p varchar,e varchar,pd varchar,g varchar)
+returns  void
+as 
+$$
+begin
+insert into register (fname,lname,username,password,email,phone,gender) 
+values(f,l,u,p,e,pd,g);
+end
+$$ language plpgsql
+select  fn_post('ravi','raju','raju@1234','4561234','raju@gmail.com','854621375','female')
+select *from register
+----------------------------------------------------------------------
+create or replace function fn_update2()
+returns varchar as
+$$
+declare v varchar;
+begin
+update  register set password='12345' where username='raju@1234'returning password into v;
+return  v;
+end$$language plpgsql
+select fn_update2()
+-----------------------------------------------------------
+create table
+ create or replace function  f1(register varchar)
+ returns void 
+ as
+ $func$
+ begin
+ execute format( 'create table if not exists %i(
+	 id serial,
+	 name varchar
+ )', 'register_' || register);
+ end
+ $func$ LANGUAGE plpgsql
+ 
+SELECT f1('register');
+-----------------------------------------------------------------------------------------------------
+//update////post//
+create or replace function fn_update3(f varchar,l varchar,u varchar,p varchar,e varchar,pd varchar,
+									 g varchar)
+returns void
+as
+$$
+
+begin
+update  register set fname=$2,lname=$3,password=$4,email=$5,phone=$6,gender=$7
+where username=$1;
+end
+$$language plpgsql
+select fn_update3('raju@123','raji','kumar','789456','rajigmai.com','45661','male')
+select *from register
+----------------------------------------------------------------------------------------
+create or replace function fn_get()
+returns table(id integer,fname varchar,lname varchar,username varchar,password varchar,email varchar,phone varchar,
+			 gender varchar)
+as
+$$
+begin
+return query
+select * from register;
+end
+$$ language plpgsql
+
+select  fn_get()
+-----------------------------------------------------------------------
+//delete//
+create or replace function fn_delete1(u varchar)
+returns void
+as
+$$
+begin
+delete from register where username=u;
+end
+$$ language plpgsql
+select fn_delete('raju@123')
+select *from register
