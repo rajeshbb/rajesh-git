@@ -1,0 +1,28 @@
+body{
+  color: #fff;
+  background: red;
+  font-family: 'Roboto', sans-serif;
+}
+.form-control{
+  height: 40px;
+  box-shadow: none;
+  color: #969fa4;
+  border-radius: 29px;
+}
+.form-control:focus{
+  border-color: #5cb85c;
+}
+/* .form-control, .btn{        
+  border-radius: 3px;
+} */
+.form{
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.form h2{
+  color: yellow;
+  margin: 0 0 15px;
+  position: relative;
+  text-align: center;
+}

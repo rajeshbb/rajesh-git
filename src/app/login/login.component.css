@@ -1,0 +1,64 @@
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-form-1{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    color: #333;
+}
+.login-form-2{
+    padding: 5%;
+    /* background: #0062cc; */
+    background-image: url("src\assets\b.gif");
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    text-align: center;
+    color: #fff;
+}
+.login-container form{
+    padding: 10%;
+}
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+}
+.login-form-2 .btnSubmit{
+    font-weight: 600;
+    color: #0062cc;
+    background-color: #fff;
+}
+.login-form-2 .ForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.div1{
+    width: 500px;
+margin-top: -57px;
+margin-left: -32px;
+height: 443px;
+}
+
+.fling-minislide {width:600px; height:0%; overflow:hidden; position:relative; }
+.fling-minislide img{ position:absolute; animation:fling-minislide 8s infinite; opacity:0; width: 100%; height:400px;}
+.fling-minislide {width:100%; height:0px; padding-bottom: 75%; overflow:hidden; position:relative; }
+@keyframes fling-minislide {25%{opacity:1;} 40%{opacity:0;}} 
+.fling-minislide img:nth-child(4){animation-delay:8s;}
+.fling-minislide img:nth-child(3){animation-delay:6s;}
+.fling-minislide img:nth-child(2){animation-delay:4s;}
+.fling-minislide img:nth-child(1){animation-delay:2s;}

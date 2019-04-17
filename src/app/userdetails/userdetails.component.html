@@ -1,0 +1,35 @@
+<p>
+  userdetails works!
+</p>
+<div class="container">
+    <div class="row">
+    <div class="col-md-10">
+      <h4>Movie List </h4>
+    
+      <table class="table">
+        <thead>
+          <tr>
+
+            <th>username</th>
+            <th>password</th>
+            <th>gender</th>
+          </tr>
+        </thead>
+        <tr *ngFor="let u of users">
+          <td>{{u.username}}</td>
+          <td>{{u.password}}</td>
+          <td>{{u.gender}}</td>
+          <td> 
+      
+            <button  (click)="btedit(u.username)"class="btn btn-success" >Edit</button>|
+            <button  (click)="btnDetails(u.username)"class="btn btn-info">Details</button>|
+            <button (click)="btnDelete(u.username)" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </table>
+      
+    
+    </div>
+    </div>
+    </div>
+    
